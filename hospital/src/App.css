@@ -453,6 +453,31 @@
   margin-bottom: 14px;
 }
 
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.mini-stat-card {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 11px;
+}
+
+.mini-stat-card h3 {
+  color: #1e40af;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.mini-stat-card p {
+  color: #475569;
+  font-size: 13px;
+}
+
 .form-group {
   display: flex;
   flex-wrap: wrap;
@@ -515,6 +540,17 @@ li {
   border-radius: 9px;
 }
 
+.list-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.list-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
 .login-page {
   min-height: 100vh;
   display: flex;
@@ -544,6 +580,43 @@ li {
   color: #475569;
 }
 
+.login-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.login-info-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 10px;
+  display: grid;
+  gap: 2px;
+}
+
+.login-info-card h4,
+.demo-users h4 {
+  color: #1e40af;
+  font-size: 14px;
+}
+
+.login-info-card p,
+.demo-users li {
+  font-size: 13px;
+  color: #475569;
+}
+
+.demo-users {
+  display: grid;
+  gap: 4px;
+}
+
+.demo-users ul li {
+  margin-top: 6px;
+  padding: 8px 10px;
+}
+
 .error-text {
   color: #b91c1c;
   font-size: 14px;
@@ -568,5 +641,9 @@ li {
 
   .support-banner {
     align-items: flex-start;
+  }
+
+  .login-info-grid {
+    grid-template-columns: 1fr;
   }
 }

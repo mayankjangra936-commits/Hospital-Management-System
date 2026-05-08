@@ -1,6 +1,19 @@
 import { Link } from 'react-router-dom';
 
 function Dashboard() {
+  const recentActivities = [
+    'Dr. Aisha completed 8 consultations in Cardiology.',
+    '4 new patients admitted in General Ward.',
+    'Lab reports uploaded for 12 scheduled appointments.',
+    'Insurance claims processed for 6 discharged patients.'
+  ];
+
+  const upcomingItems = [
+    { id: 1, title: 'Health Camp', value: '14 May, Community Hall' },
+    { id: 2, title: 'MRI Maintenance', value: '16 May, 11:00 PM' },
+    { id: 3, title: 'Staff Training', value: '18 May, Conference Room' }
+  ];
+
   return (
     <section className="home-page">
       <div className="home-hero">
@@ -129,6 +142,33 @@ function Dashboard() {
         <div className="support-actions">
           <a className="solid-link primary-link" href="tel:+911024567890">Call Emergency</a>
           <Link className="solid-link ghost-link" to="/appointments">Request Appointment</Link>
+        </div>
+      </div>
+
+      <div className="home-section split-section">
+        <div className="section-heading">
+          <h3>Recent Activity</h3>
+          <p>Live updates from hospital operations and patient flow.</p>
+        </div>
+        <ul>
+          {recentActivities.map((activity) => (
+            <li key={activity}>{activity}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="home-section">
+        <div className="section-heading">
+          <h3>Upcoming Schedule</h3>
+          <p>Important hospital events and operational reminders.</p>
+        </div>
+        <div className="feature-grid">
+          {upcomingItems.map((item) => (
+            <article key={item.id} className="feature-card">
+              <h4>{item.title}</h4>
+              <p>{item.value}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
