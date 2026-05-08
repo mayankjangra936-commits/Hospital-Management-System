@@ -145,32 +145,6 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="home-section split-section">
-        <div className="section-heading">
-          <h3>Recent Activity</h3>
-          <p>Live updates from hospital operations and patient flow.</p>
-        </div>
-        <ul>
-          {recentActivities.map((activity) => (
-            <li key={activity}>{activity}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="home-section">
-        <div className="section-heading">
-          <h3>Upcoming Schedule</h3>
-          <p>Important hospital events and operational reminders.</p>
-        </div>
-        <div className="feature-grid">
-          {upcomingItems.map((item) => (
-            <article key={item.id} className="feature-card">
-              <h4>{item.title}</h4>
-              <p>{item.value}</p>
-            </article>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
