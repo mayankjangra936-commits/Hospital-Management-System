@@ -26,7 +26,7 @@ function Login() {
     <div className="login-page">
       <form className="login-card" onSubmit={handleLogin}>
         <h2>Hospital Login</h2>
-        <p>Sign in to continue to the dashboard.</p>
+        <p>Sign in to continue to the home page.</p>
         <div className="login-info-grid">
           <div className="login-info-card">
             <h4>Today Snapshot</h4>

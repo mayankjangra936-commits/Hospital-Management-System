@@ -73,13 +73,13 @@ a {
   padding: 24px 20px;
 }
 
-.dashboard {
+.home-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
-.dashboard-card {
+.home-card {
   background: #ffffff;
   padding: 24px;
   border-radius: 12px;
@@ -87,7 +87,7 @@ a {
   border: 1px solid #d1d5db;
 }
 
-.dashboard-card h3 {
+.home-card h3 {
   font-size: 32px;
   color: #1e3a8a;
   margin-bottom: 8px;

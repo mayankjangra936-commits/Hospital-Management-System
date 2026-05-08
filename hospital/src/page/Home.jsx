@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Dashboard() {
+function Home() {
   const recentActivities = [
     'Dr. Aisha completed 8 consultations in Cardiology.',
     '4 new patients admitted in General Ward.',
@@ -34,20 +34,20 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="dashboard">
-        <div className="dashboard-card">
+      <div className="home-stats">
+        <div className="home-card">
           <h3>10+</h3>
           <p>Doctors</p>
         </div>
-        <div className="dashboard-card">
+        <div className="home-card">
           <h3>120+</h3>
           <p>Patients</p>
         </div>
-        <div className="dashboard-card">
+        <div className="home-card">
           <h3>45+</h3>
           <p>Appointments</p>
         </div>
-        <div className="dashboard-card">
+        <div className="home-card">
           <h3>50000</h3>
           <p>Revenue</p>
         </div>
@@ -149,4 +149,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Home;

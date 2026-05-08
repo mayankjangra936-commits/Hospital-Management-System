@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from '/src/component/Navbar.jsx';
-import Dashboard from '/src/page/Dashboard.jsx';
+import Home from '/src/page/Home.jsx';
 import DoctorManagement from '/src/page/Doctors.jsx';
 import PatientManagement from '/src/page/Patients.jsx';
 import AppointmentSystem from '/src/page/Appointments.jsx';
@@ -25,7 +25,7 @@ function App() {
         path="/"
         element={
           <MainLayout>
-            <Dashboard />
+            <Home />
           </MainLayout>
         }
       />
