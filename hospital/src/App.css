@@ -206,6 +206,146 @@
   background: #1e293b;
 }
 
+.home-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.section-heading h3 {
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.section-heading p {
+  color: #475569;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.feature-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  background: #f8fafc;
+}
+
+.feature-card h4 {
+  color: #1d4ed8;
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  color: #334155;
+  font-size: 14px;
+}
+
+.split-section {
+  gap: 16px;
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.department-item {
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 14px;
+  background: linear-gradient(145deg, #eff6ff, #f8fafc);
+}
+
+.department-item h4 {
+  color: #1e40af;
+  margin-bottom: 6px;
+}
+
+.department-item p {
+  font-size: 14px;
+  color: #334155;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.process-step {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 15px;
+  background: #ffffff;
+}
+
+.process-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.process-step h4 {
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.process-step p {
+  color: #475569;
+  font-size: 14px;
+}
+
+.support-banner {
+  background: linear-gradient(120deg, #1e40af, #1d4ed8);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.support-banner h3 {
+  margin-bottom: 4px;
+}
+
+.support-banner p {
+  color: #dbeafe;
+}
+
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.support-actions .ghost-link {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.support-actions .ghost-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .doctor-page {
   display: grid;
   gap: 16px;
@@ -424,5 +564,9 @@ li {
 
   .home-hero-media img {
     min-height: 180px;
+  }
+
+  .support-banner {
+    align-items: flex-start;
   }
 }

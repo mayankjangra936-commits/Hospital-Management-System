@@ -46,6 +46,91 @@ function Dashboard() {
         <Link to="/appointments" className="solid-link">View Appointments</Link>
         <Link to="/billing" className="solid-link">Open Billing</Link>
       </div>
+
+      <div className="home-section">
+        <div className="section-heading">
+          <h3>Core Services</h3>
+          <p>Everything needed for a modern hospital workflow in one platform.</p>
+        </div>
+        <div className="feature-grid">
+          <article className="feature-card">
+            <h4>Outpatient Management</h4>
+            <p>Register, monitor and update OPD patient records in real time.</p>
+          </article>
+          <article className="feature-card">
+            <h4>IPD Monitoring</h4>
+            <p>Track admissions, assigned doctors, room details and discharge flow.</p>
+          </article>
+          <article className="feature-card">
+            <h4>Digital Billing</h4>
+            <p>Generate transparent bills with consultation, pharmacy and service charges.</p>
+          </article>
+          <article className="feature-card">
+            <h4>Appointment Queue</h4>
+            <p>Handle daily schedules and reduce waiting time with slot-based booking.</p>
+          </article>
+        </div>
+      </div>
+
+      <div className="home-section split-section">
+        <div className="section-heading">
+          <h3>Hospital Departments</h3>
+          <p>Key specialties available for comprehensive patient care.</p>
+        </div>
+        <div className="department-list">
+          <div className="department-item">
+            <h4>Cardiology</h4>
+            <p>Advanced diagnostics, ECG monitoring and cardiac follow-up care.</p>
+          </div>
+          <div className="department-item">
+            <h4>Neurology</h4>
+            <p>Specialist consultations for stroke, epilepsy and neuro disorders.</p>
+          </div>
+          <div className="department-item">
+            <h4>Pediatrics</h4>
+            <p>Dedicated child care unit with vaccination and growth monitoring.</p>
+          </div>
+          <div className="department-item">
+            <h4>Orthopedics</h4>
+            <p>Bone and joint treatments with post-surgery rehabilitation support.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="home-section">
+        <div className="section-heading">
+          <h3>How It Works</h3>
+          <p>Simple process for patients and staff across all visits.</p>
+        </div>
+        <div className="process-grid">
+          <div className="process-step">
+            <span>01</span>
+            <h4>Patient Registration</h4>
+            <p>Capture demographics, case details and prior visit history quickly.</p>
+          </div>
+          <div className="process-step">
+            <span>02</span>
+            <h4>Consultation & Tests</h4>
+            <p>Assign doctor, record findings and manage prescriptions digitally.</p>
+          </div>
+          <div className="process-step">
+            <span>03</span>
+            <h4>Billing & Follow-up</h4>
+            <p>Generate bill, payment receipt and schedule next consultation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="support-banner">
+        <div>
+          <h3>Need Immediate Assistance?</h3>
+          <p>Our support and emergency desk is available 24/7 for urgent requests.</p>
+        </div>
+        <div className="support-actions">
+          <a className="solid-link primary-link" href="tel:+911024567890">Call Emergency</a>
+          <Link className="solid-link ghost-link" to="/appointments">Request Appointment</Link>
+        </div>
+      </div>
     </section>
   );
 }
