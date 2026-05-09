@@ -94,3 +94,6 @@ A **Hospital Management System (HMS)** is a web-based application designed to ma
 * SMS/Email notifications
 * Mobile app support
 * AI-based diagnosis suggestions
+
+
+* new changes
