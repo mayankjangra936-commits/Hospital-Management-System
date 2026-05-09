@@ -7,7 +7,10 @@ function BillingSystem() {
     { id: 1, patient: 'Ritika Saini', amount: '2450', method: 'UPI', status: 'Paid' },
     { id: 2, patient: 'Dev Malhotra', amount: '8600', method: 'Card', status: 'Pending' },
     { id: 3, patient: 'Sakshi Jain', amount: '1320', method: 'Cash', status: 'Paid' },
-    { id: 4, patient: 'Imran Khan', amount: '4210', method: 'Insurance', status: 'Processing' }
+    { id: 4, patient: 'Imran Khan', amount: '4210', method: 'Insurance', status: 'Processing' },
+    { id: 5, patient: 'Neha Sharma', amount: '2750', method: 'UPI', status: 'Paid' },
+    { id: 6, patient: 'Rahul Verma', amount: '6900', method: 'Card', status: 'Pending' },
+    { id: 7, patient: 'Kavita Singh', amount: '3580', method: 'Insurance', status: 'Processing' }
   ]);
 
   const generateBill = () => {
@@ -29,9 +32,13 @@ function BillingSystem() {
   };
 
   return (
-    <div className="container">
+    <div className="container billing-page">
       <div className="card">
-        <h2>Billing System</h2>
+        <div className="page-hero page-hero-billing">
+          <p className="page-hero-tag">Financial Desk</p>
+          <h2>Billing System</h2>
+          <span>Payments & Insurance Tracking</span>
+        </div>
         <div className="mini-stats">
           <div className="mini-stat-card">
             <h3>₹1,42,300</h3>
@@ -65,8 +72,11 @@ function BillingSystem() {
         <ul>
           {bills.map((bill) => (
             <li key={bill.id}>
-              <div className="list-title">{bill.patient} - ₹{bill.amount}</div>
-              <div className="list-subtitle">{bill.method} | {bill.status}</div>
+              <div className="list-row">
+                <div className="list-title">{bill.patient} - ₹{bill.amount}</div>
+                <span className={`list-chip status-${bill.status.toLowerCase()}`}>{bill.status}</span>
+              </div>
+              <div className="list-subtitle">{bill.method}</div>
             </li>
           ))}
         </ul>

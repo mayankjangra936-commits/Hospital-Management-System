@@ -14,16 +14,49 @@ function Home() {
     { id: 3, title: 'Staff Training', value: '18 May, Conference Room' }
   ];
 
+  const trustStats = [
+    { id: 1, value: '24x7', label: 'Emergency Care' },
+    { id: 2, value: '50+', label: 'Specialist Doctors' },
+    { id: 3, value: '99%', label: 'Patient Satisfaction' }
+  ];
+
+  const highlights = [
+    'NABH Standard Protocols',
+    'Advanced Modular OT Complex',
+    'Cashless Insurance Support',
+    'Ambulance Network in 15 mins'
+  ];
+
   return (
     <section className="home-page">
+      <div className="emergency-strip">
+        <p>Emergency & Trauma Unit is active 24/7.</p>
+        <a href="tel:+911024567890">Helpline: +91 10245 67890</a>
+      </div>
+
       <div className="home-hero">
         <div className="home-hero-content">
-          <span className="hero-badge">24/7 Care Platform</span>
-          <h2>Welcome to the Hospital Management Portal</h2>
-          <p>Manage doctors, patients, appointments and billing in one place.</p>
+          <span className="hero-badge">Park Style Multi-Speciality Care</span>
+          <h2>Advanced Healthcare With Compassionate Treatment</h2>
+          <p>
+            Integrated hospital management for OPD, IPD, diagnostics, emergency care and
+            specialist consultation under one digital dashboard.
+          </p>
           <div className="hero-actions">
-            <Link to="/appointments" className="solid-link primary-link">Book Appointment</Link>
-            <Link to="/billing" className="solid-link ghost-link">Open Billing</Link>
+            <Link to="/appointments" className="solid-link primary-link">Book Consultation</Link>
+            <Link to="/doctors" className="solid-link ghost-link">Find Specialists</Link>
+          </div>
+          <div className="hero-mini-points">
+            <span>Same-day specialist appointments</span>
+            <span>Digital reports & billing</span>
+          </div>
+          <div className="hero-trust-row">
+            {trustStats.map((item) => (
+              <div className="hero-trust-item" key={item.id}>
+                <h4>{item.value}</h4>
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="home-hero-media">
@@ -34,53 +67,59 @@ function Home() {
         </div>
       </div>
 
+      <div className="highlight-ticker">
+        {highlights.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
+
       <div className="home-stats">
         <div className="home-card">
-          <h3>10+</h3>
-          <p>Doctors</p>
+          <h3>1200+</h3>
+          <p>Monthly OPD Visits</p>
         </div>
         <div className="home-card">
-          <h3>120+</h3>
-          <p>Patients</p>
+          <h3>350+</h3>
+          <p>In-patient Beds</p>
         </div>
         <div className="home-card">
-          <h3>45+</h3>
-          <p>Appointments</p>
+          <h3>40+</h3>
+          <p>Departments</p>
         </div>
         <div className="home-card">
-          <h3>50000</h3>
-          <p>Revenue</p>
+          <h3>15+</h3>
+          <p>Years of Service</p>
         </div>
       </div>
 
       <div className="quick-links">
-        <Link to="/doctors" className="solid-link">Manage Doctors</Link>
-        <Link to="/patients" className="solid-link">Manage Patients</Link>
-        <Link to="/appointments" className="solid-link">View Appointments</Link>
-        <Link to="/billing" className="solid-link">Open Billing</Link>
+        <Link to="/doctors" className="solid-link">Doctors Directory</Link>
+        <Link to="/patients" className="solid-link">Patient Desk</Link>
+        <Link to="/appointments" className="solid-link">Appointment Queue</Link>
+        <Link to="/billing" className="solid-link">Billing Counter</Link>
       </div>
 
       <div className="home-section">
         <div className="section-heading">
-          <h3>Core Services</h3>
-          <p>Everything needed for a modern hospital workflow in one platform.</p>
+          <h3>Core Clinical Services</h3>
+          <p>Patient-first services inspired by modern multi-speciality hospital standards.</p>
         </div>
         <div className="feature-grid">
           <article className="feature-card">
-            <h4>Outpatient Management</h4>
-            <p>Register, monitor and update OPD patient records in real time.</p>
+            <h4>Critical Care & ICU</h4>
+            <p>Round-the-clock intensivist supervision with high-end life support systems.</p>
           </article>
           <article className="feature-card">
-            <h4>IPD Monitoring</h4>
-            <p>Track admissions, assigned doctors, room details and discharge flow.</p>
+            <h4>Cardiac Sciences</h4>
+            <p>Comprehensive heart care from diagnostics to intervention and rehabilitation.</p>
           </article>
           <article className="feature-card">
-            <h4>Digital Billing</h4>
-            <p>Generate transparent bills with consultation, pharmacy and service charges.</p>
+            <h4>Mother & Child Care</h4>
+            <p>Dedicated women and pediatric units focused on safe and complete care.</p>
           </article>
           <article className="feature-card">
-            <h4>Appointment Queue</h4>
-            <p>Handle daily schedules and reduce waiting time with slot-based booking.</p>
+            <h4>Diagnostics & Imaging</h4>
+            <p>Fast radiology and pathology support for accurate and timely clinical decisions.</p>
           </article>
         </div>
       </div>
@@ -93,19 +132,46 @@ function Home() {
         <div className="department-list">
           <div className="department-item">
             <h4>Cardiology</h4>
-            <p>Advanced diagnostics, ECG monitoring and cardiac follow-up care.</p>
+            <p>Interventional cardiology, heart failure clinic and post-procedure monitoring.</p>
           </div>
           <div className="department-item">
             <h4>Neurology</h4>
-            <p>Specialist consultations for stroke, epilepsy and neuro disorders.</p>
-          </div>
-          <div className="department-item">
-            <h4>Pediatrics</h4>
-            <p>Dedicated child care unit with vaccination and growth monitoring.</p>
+            <p>Neuro consultation for stroke pathways, seizure care and movement disorders.</p>
           </div>
           <div className="department-item">
             <h4>Orthopedics</h4>
-            <p>Bone and joint treatments with post-surgery rehabilitation support.</p>
+            <p>Joint replacement, trauma management and physiotherapy-backed recovery plans.</p>
+          </div>
+          <div className="department-item">
+            <h4>Oncology</h4>
+            <p>Integrated cancer screening, treatment coordination and personalized follow-up.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="home-section updates-section">
+        <div className="section-heading">
+          <h3>Live Hospital Updates</h3>
+          <p>Track key operations and upcoming hospital initiatives in one glance.</p>
+        </div>
+        <div className="updates-grid">
+          <div className="updates-card">
+            <h4>Recent Activities</h4>
+            <ul>
+              {recentActivities.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="updates-card">
+            <h4>Upcoming Schedule</h4>
+            <ul>
+              {upcomingItems.map((item) => (
+                <li key={item.id}>
+                  <strong>{item.title}:</strong> {item.value}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

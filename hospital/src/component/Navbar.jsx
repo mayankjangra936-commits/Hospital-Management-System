@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ isDarkMode, onToggleTheme }) {
   return (
     <header className="navbar">
       <div className="navbar-inner">
@@ -12,6 +12,9 @@ function Navbar() {
           <NavLink to="/appointments">Appointments</NavLink>
           <NavLink to="/billing">Billing</NavLink>
           <NavLink to="/login">Login</NavLink>
+          <button type="button" className="nav-theme-toggle" onClick={onToggleTheme}>
+            {isDarkMode ? 'Light' : 'Dark'}
+          </button>
         </nav>
       </div>
     </header>
